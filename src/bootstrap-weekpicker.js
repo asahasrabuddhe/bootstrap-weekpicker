@@ -5,7 +5,9 @@
         // Variables
         var currentDate = moment(),
             selectedWeek,
-            selectedYear
+            selectedYear,
+            startDate,
+            endDate,
 
         // Public functions
         this.getWeek = function () {
@@ -14,6 +16,14 @@
 
         this.getYear = function () {
             return selectedYear;
+        }
+        
+        this.getStartDate = function() {
+            return startDate;
+        }
+        
+        this.getEndDate = function() {
+            return endDate;
         }
 
         // Private functions
@@ -35,6 +45,9 @@
                 year += 1;
             }
             selectedYear = year;
+            
+            startDate = currentDate.clone().weekday(0);
+            endDate = currentDate.clone().weekday(6);
 
             element.val("Week " + calendarWeek + ", " + year);
         }
