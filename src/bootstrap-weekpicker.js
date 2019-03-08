@@ -7,7 +7,7 @@
             selectedWeek,
             selectedYear,
             startDate,
-            endDate,
+            endDate;
 
         // Public functions
         this.getWeek = function () {
