@@ -46,8 +46,8 @@
             }
             selectedYear = year;
             
-            startDate = currentDate.clone().weekday(0);
-            endDate = currentDate.clone().weekday(6);
+            startDate = currentDate.clone().weekday(0).format('YYYY-MM-DD HH:mm:ss');
+            endDate = currentDate.clone().weekday(6).format('YYYY-MM-DD HH:mm:ss');
 
             element.val("Week " + calendarWeek + ", " + year);
         }
